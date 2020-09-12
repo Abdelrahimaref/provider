@@ -263,8 +263,9 @@
                                             <td>Axa</td>
                                             <td>15-2-2020</td>
                                             <td>Ahmed Mohamed</td>
-                                            <td><span class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="You Deactivate this because it not doing his right job" style="cursor:help;">Un Active</span></td>
-                                            <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#unActive" disabled>Deactivate Company</button></td>
+                                            <td><span class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="You Deactivate this because it not doing his right job" style="cursor:help;">Un Active</span></td>
+                                            <td style="display: none;"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#unActive" >Deactivate Company</button></td>
+                                            <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#Active">activate Company</button></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -279,8 +280,11 @@
                                             <td>Egycare</td>
                                             <td>15-2-2020</td>
                                             <td>Ahmed Mohamed</td>
-                                            <td><span class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="You Deactivate this because it not doing his right job" style="cursor:help;">Un Active</span></td>
-                                            <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#unActive" disabled>Deactivate Company</button></td>
+                                            <td>
+                                                <span class="btn btn-danger btn-sm" data-toggle="tooltip" title="You Deactivate this because it not doing his right job" style="cursor:help;">Un Active</span>
+                                            </td>
+                                            <td style="display: none;"><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#unActive" >Deactivate Company</button></td>
+                                            <td><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#Active">activate Company</button></td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
@@ -522,6 +526,25 @@
         </div>
         <!------- End Of Modal-->
 
+        <!------- Unactive Company Modal --------->
+        <div class="modal fade" id="Active">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">Are You Sure ?</div>
+                        <button type="button" class="close" data-dismiss="modal">&times</button>
+                    </div>
+                    <div class="modal-body">
+                        Reason Is Sloved ??
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-info btn-sm" data-dismiss="modal">Still DeActive</button>
+                        <button class="btn btn-danger btn-sm" data-dismiss="modal">Active</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------- End Of Modal-->
         <!------- New Contract Modal --------->
         <div class="modal fade" id="new-contract">
             <div class="modal-dialog">
@@ -565,6 +588,11 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="js/sliderComponents.js"></script>
         <script src="js/e.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();   
+            });
+        </script>
 	</body>
     
 
